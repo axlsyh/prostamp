@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Katalog Produk – PRO Stamp</title>
+  <meta name="description" content="Katalog lengkap stempel PRO Stamp: Stempel Trodat, Shiny, Dater, Numberer, Bantalan, dan Tinta Refill." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    /* Hide scrollbar for tab strip */
+    #tab-cats::-webkit-scrollbar { display: none; }
+    #tab-cats { -ms-overflow-style: none; scrollbar-width: none; }
+    /* Slim scrollbar for sidebar */
+    #sidebar-cats-wrapper::-webkit-scrollbar { width: 4px; }
+    #sidebar-cats-wrapper::-webkit-scrollbar-track { background: transparent; }
+    #sidebar-cats-wrapper::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+    #sidebar-cats-wrapper::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+  </style>
+</head>
+<body class="bg-slate-50 min-h-screen flex flex-col">
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="sticky top-0 z-40 bg-white border-b border-slate-200 shadow-sm">
+    <!-- Row 1: Logo | Search (desktop) | Nav links -->
+    <div class="max-w-screen-xl mx-auto px-4 h-16 sm:h-20 flex items-center gap-4">
+
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-2 shrink-0 py-1">
+        <img src="images/prostamplogo.png" alt="PRO Stamp"
+             class="h-12 sm:h-16 w-auto object-contain"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='inline'">
+        <span style="display:none" class="text-xl font-bold text-slate-800">
+          PRO<span class="text-blue-600">Stamp</span>
+        </span>
+      </a>
+
+      <!-- Search bar (desktop: visible, mobile: hidden here, shown in row 2) -->
+      <div class="hidden md:flex flex-1 items-center relative">
+        <svg class="absolute left-3 w-4 h-4 text-slate-400 pointer-events-none" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <circle cx="11" cy="11" r="8"/><path stroke-linecap="round" stroke-linejoin="round" d="m21 21-4.35-4.35"/>
+        </svg>
+        <input id="search-input"
+               type="search"
+               placeholder="Cari tipe stempel, seri (misal: 4911, S-828, N-412)..."
+               class="w-full pl-9 pr-4 py-2 text-sm bg-slate-100 border border-transparent rounded-lg focus:outline-none focus:border-blue-400 focus:bg-white transition-colors" />
+      </div>
+
+      <!-- Right nav -->
+      <div class="ml-auto flex items-center gap-4 shrink-0 text-sm">
+        <a href="index.html" class="hidden sm:flex items-center gap-1 text-slate-600 hover:text-blue-600 font-medium transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+          </svg>
+          Beranda
+        </a>
+        <a href="https://wa.me/6282114017009" target="_blank" rel="noopener noreferrer"
+           class="flex items-center gap-1.5 text-green-600 hover:text-green-700 font-semibold transition-colors">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.533 5.86L.057 23.428a.75.75 0 00.914.914l5.569-1.476A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.95 0-3.78-.504-5.37-1.386l-.385-.22-3.985 1.057 1.057-3.863-.238-.394A9.953 9.953 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+          </svg>
+          <span class="hidden sm:inline">0821-1401-7009</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Row 2: Search bar (mobile only) -->
+    <div class="md:hidden px-4 pb-3">
+      <div class="relative">
+        <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 pointer-events-none" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <circle cx="11" cy="11" r="8"/><path stroke-linecap="round" stroke-linejoin="round" d="m21 21-4.35-4.35"/>
+        </svg>
+        <input id="search-input-mobile"
+               type="search"
+               placeholder="Cari tipe stempel, seri (misal: 4911, S-828, N-412)..."
+               class="w-full pl-9 pr-4 py-2 text-sm bg-slate-100 border border-transparent rounded-lg focus:outline-none focus:border-blue-400 focus:bg-white transition-colors" />
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== MOBILE TAB KATEGORI ===================== -->
+  <div class="block lg:hidden border-b border-slate-200 bg-white">
+    <div id="tab-cats" class="flex overflow-x-auto gap-2 py-3 px-4">
+      <!-- Filled by JS -->
+    </div>
+  </div>
+
+  <!-- ===================== MAIN CONTENT ===================== -->
+  <main class="flex-1 max-w-screen-xl mx-auto w-full px-4 py-6">
+    <div class="flex gap-6 items-start">
+
+      <!-- ========== SIDEBAR KATEGORI (desktop) ========== -->
+      <aside id="sidebar-cats-wrapper" class="hidden lg:block w-64 xl:w-72 shrink-0 sticky top-24 max-h-[calc(100vh-7rem)] overflow-y-auto pr-2">
+        <p class="text-[11px] font-semibold uppercase tracking-widest text-slate-400 mb-3 px-2">Kategori</p>
+        <nav id="sidebar-cats" class="flex flex-col gap-1">
+          <!-- Filled by JS -->
+        </nav>
+      </aside>
+
+      <!-- ========== PRODUCT AREA ========== -->
+      <div class="flex-1 min-w-0">
+
+        <!-- Result count -->
+        <div class="mb-4 flex items-center justify-between">
+          <p id="result-count" class="text-sm text-slate-500"></p>
+        </div>
+
+        <!-- Grid -->
+        <div id="product-grid"
+             class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
+          <!-- Filled by JS -->
+        </div>
+
+        <!-- Empty state (inside grid as col-span-full) -->
+        <div id="empty-state" class="hidden">
+          <div class="flex flex-col items-center justify-center py-20 text-center gap-4">
+            <svg class="w-16 h-16 text-slate-200" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+              <circle cx="11" cy="11" r="8"/><path stroke-linecap="round" stroke-linejoin="round" d="m21 21-4.35-4.35"/>
+            </svg>
+            <p class="text-slate-400 font-medium">Produk tidak ditemukan</p>
+            <p class="text-xs text-slate-400">Coba kata kunci lain atau pilih kategori berbeda</p>
+            <button onclick="setCategory('all'); document.getElementById('search-input').value=''; document.getElementById('search-input-mobile').value='';"
+                    class="text-xs text-blue-600 hover:underline font-medium">
+              Tampilkan semua produk
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="border-t border-slate-200 bg-white mt-10">
+    <div class="max-w-screen-xl mx-auto px-4 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-slate-500">
+      <p>© 2026 <span class="font-semibold text-slate-700">PRO Stamp</span>. Semua hak dilindungi.</p>
+      <div class="flex items-center gap-4">
+        <a href="index.html" class="hover:text-blue-600 transition-colors">← Beranda</a>
+        <a href="https://wa.me/6282114017009" target="_blank" rel="noopener noreferrer"
+           class="flex items-center gap-1.5 text-green-600 hover:text-green-700 font-semibold transition-colors">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.533 5.86L.057 23.428a.75.75 0 00.914.914l5.569-1.476A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.95 0-3.78-.504-5.37-1.386l-.385-.22-3.985 1.057 1.057-3.863-.238-.394A9.953 9.953 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+          </svg>
+          0821-1401-7009
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================== JAVASCRIPT ===================== -->
+  <script>
+    // ── CATEGORIES ──────────────────────────────────────────────────────────
+    const categories = [
+      { id: 'all',                      label: 'Semua Produk' },
+      { id: 'trodat-tanggal-otomatis',  label: 'Stempel Tanggal Otomatis TRODAT' },
+      { id: 'shiny-tanggal-otomatis',   label: 'Stempel Tanggal Otomatis SHINY' },
+      { id: 'trodat-tanggal',           label: 'Stempel Tanggal TRODAT' },
+      { id: 'trodat-otomatis',          label: 'Stempel Otomatis TRODAT' },
+      { id: 'shiny-otomatis',           label: 'Stempel Otomatis SHINY' },
+      { id: 'trodat-angka',             label: 'Stempel Angka TRODAT' },
+      { id: 'shiny-angka',              label: 'Stempel Angka SHINY' },
+      { id: 'trodat-bongkar-pasang',    label: 'Stempel Bongkar Pasang TRODAT' },
+      { id: 'shiny-bongkar-pasang',     label: 'Stempel Bongkar Pasang SHINY' },
+      { id: 'trodat-inkpad',            label: 'Bantalan / Replacement Ink Pad TRODAT' },
+      { id: 'shiny-inkpad',             label: 'Bantalan / Replacement Ink Pad SHINY' },
+      { id: 'trodat-tinta-bak',         label: 'Tinta & Bak Stempel TRODAT' },
+      { id: 'shiny-tinta-bak',          label: 'Tinta & Bak Stempel SHINY' },
+      { id: 'tinta-permanen',           label: 'Tinta Permanen' },
+      { id: 'trodat-sparepart',         label: 'Sparepart / Aksesoris Stempel TRODAT' },
+      { id: 'shiny-sparepart',          label: 'Sparepart / Aksesoris Stempel SHINY' },
+    ];
+
+    // ── PRODUCTS ─────────────────────────────────────────────────────────────
+    const products = [
+      // STEMPEL OTOMATIS TRODAT
+      { id:'trodat-4911',     category:'trodat-otomatis',            brand:'TRODAT', name:'Trodat Printy 4911',                 spec:'Area cap: 38 × 14 mm · 3 baris teks',                          price:'Rp 95.000',  image:'images/trodat-4911.jpg' },
+      { id:'trodat-4913',     category:'trodat-otomatis',            brand:'TRODAT', name:'Trodat Printy 4913',                 spec:'Area cap: 58 × 22 mm · 5 baris teks',                          price:'Rp 115.000', image:'images/trodat-4913.jpg' },
+      { id:'trodat-4642',     category:'trodat-otomatis',            brand:'TRODAT', name:'Trodat Printy 4642',                 spec:'Area cap: Bulat Ø 42 mm · 5 baris teks',                       price:'Rp 145.000', image:'images/trodat-4642.jpg' },
+      { id:'trodat-4921',     category:'trodat-otomatis',            brand:'TRODAT', name:'Trodat Printy 4921',                 spec:'Area cap: Bulat Ø 21 mm · 2 baris teks',                       price:'Rp 85.000',  image:'images/trodat-4921.jpg' },
+      { id:'trodat-4922',     category:'trodat-otomatis',            brand:'TRODAT', name:'Trodat Printy 4922',                 spec:'Area cap: Bulat Ø 22 mm · 2 baris teks',                       price:'Rp 90.000',  image:'images/trodat-4922.jpg' },
+      { id:'trodat-4923',     category:'trodat-otomatis',            brand:'TRODAT', name:'Trodat Printy 4923',                 spec:'Area cap: Bulat Ø 23 mm · 3 baris teks',                       price:'Rp 95.000',  image:'images/trodat-4923.jpg' },
+      { id:'trodat-46050',    category:'trodat-otomatis',            brand:'TRODAT', name:'Trodat Printy 46050',                spec:'Area cap: 50 × 30 mm · 5 baris teks',                          price:'Rp 135.000', image:'images/trodat-46050.jpg' },
+
+      // STEMPEL OTOMATIS SHINY
+      { id:'shiny-S828',      category:'shiny-otomatis',             brand:'SHINY',  name:'Shiny Printer S-828',                spec:'Area cap: 60 × 36 mm · 7 baris teks',                          price:'Rp 95.000',  image:'images/shiny-S828.jpg' },
+      { id:'shiny-S852',      category:'shiny-otomatis',             brand:'SHINY',  name:'Shiny Printer S-852',                spec:'Area cap: 56 × 15 mm · 3 baris teks',                          price:'Rp 85.000',  image:'images/shiny-S852.jpg' },
+      { id:'shiny-S520',      category:'shiny-otomatis',             brand:'SHINY',  name:'Shiny Printer S-520',                spec:'Area cap: Bulat Ø 20 mm · 2 baris teks',                       price:'Rp 80.000',  image:'images/shiny-S520.jpg' },
+      { id:'shiny-S832',      category:'shiny-otomatis',             brand:'SHINY',  name:'Shiny Printer S-832',                spec:'Area cap: 47 × 18 mm · 4 baris teks',                          price:'Rp 88.000',  image:'images/shiny-S832.jpg' },
+      { id:'shiny-S851',      category:'shiny-otomatis',             brand:'SHINY',  name:'Shiny Printer S-851',                spec:'Area cap: 38 × 14 mm · 3 baris teks',                          price:'Rp 80.000',  image:'images/shiny-S851.jpg' },
+      { id:'shiny-S310',      category:'shiny-otomatis',             brand:'SHINY',  name:'Shiny Printer S-310',                spec:'Area cap: Bulat Ø 30 mm · 4 baris teks',                       price:'Rp 90.000',  image:'images/shiny-S310.jpg' },
+      { id:'shiny-R532',      category:'shiny-otomatis',             brand:'SHINY',  name:'Shiny Printer R-532',                spec:'Area cap: Oval 32 × 20 mm · 3 baris teks',                     price:'Rp 85.000',  image:'images/shiny-R532.jpg' },
+      { id:'shiny-R538',      category:'shiny-otomatis',             brand:'SHINY',  name:'Shiny Printer R-538',                spec:'Area cap: Oval 38 × 25 mm · 4 baris teks',                     price:'Rp 92.000',  image:'images/shiny-R538.jpg' },
+
+      // STEMPEL TANGGAL OTOMATIS TRODAT
+      { id:'trodat-4810',     category:'trodat-tanggal-otomatis',    brand:'TRODAT', name:'Trodat Dater 4810',                  spec:'Area cap: 41 × 24 mm · Tanggal otomatis',                      price:'Rp 185.000', image:'images/trodat-4810.jpg' },
+      { id:'trodat-4813',     category:'trodat-tanggal-otomatis',    brand:'TRODAT', name:'Trodat Dater 4813 Expired',          spec:'Area cap: 41 × 24 mm · Tanggal kadaluarsa',                    price:'Rp 195.000', image:'images/trodat-4813.jpg' },
+      { id:'trodat-4816',     category:'trodat-tanggal-otomatis',    brand:'TRODAT', name:'Trodat Dater 4816 Double',           spec:'Area cap: 41 × 24 mm · Double tanggal',                        price:'Rp 215.000', image:'images/trodat-4816.jpg' },
+      { id:'trodat-4817',     category:'trodat-tanggal-otomatis',    brand:'TRODAT', name:'Trodat Dater 4817',                  spec:'Area cap: 41 × 24 mm · + 2 baris teks',                        price:'Rp 205.000', image:'images/trodat-4817.jpg' },
+      { id:'trodat-4822',     category:'trodat-tanggal-otomatis',    brand:'TRODAT', name:'Trodat Dater 4822',                  spec:'Area cap: 56 × 33 mm · + 3 baris teks',                        price:'Rp 225.000', image:'images/trodat-4822.jpg' },
+
+      // STEMPEL TANGGAL TRODAT (Manual)
+      { id:'trodat-1000',     category:'trodat-tanggal',             brand:'TRODAT', name:'Trodat Dater 1000 Manual',           spec:'Stempel tanggal manual · 2+2 baris',                           price:'Rp 165.000', image:'images/trodat-1000.jpg' },
+      { id:'trodat-1010',     category:'trodat-tanggal',             brand:'TRODAT', name:'Trodat Dater 1010 Manual',           spec:'Stempel tanggal manual · format panjang',                      price:'Rp 175.000', image:'images/trodat-1010.jpg' },
+
+      // STEMPEL TANGGAL OTOMATIS SHINY
+      { id:'shiny-S400',      category:'shiny-tanggal-otomatis',     brand:'SHINY',  name:'Shiny Dater S-400',                  spec:'Area cap: 41 × 24 mm · Tanggal otomatis',                      price:'Rp 165.000', image:'images/shiny-S400.jpg' },
+      { id:'shiny-S311',      category:'shiny-tanggal-otomatis',     brand:'SHINY',  name:'Shiny Dater S-311 (2 Warna)',        spec:'Area cap: 41 × 24 mm · Merah + Biru',                          price:'Rp 185.000', image:'images/shiny-S311.jpg' },
+      { id:'shiny-S303',      category:'shiny-tanggal-otomatis',     brand:'SHINY',  name:'Shiny Dater S-303',                  spec:'Area cap: 38 × 20 mm · Tanggal otomatis',                      price:'Rp 155.000', image:'images/shiny-S303.jpg' },
+      { id:'shiny-S312',      category:'shiny-tanggal-otomatis',     brand:'SHINY',  name:'Shiny Dater S-312',                  spec:'Area cap: 41 × 24 mm · + 1 baris teks',                        price:'Rp 175.000', image:'images/shiny-S312.jpg' },
+      { id:'shiny-S409',      category:'shiny-tanggal-otomatis',     brand:'SHINY',  name:'Shiny Dater S-409',                  spec:'Area cap: 41 × 24 mm · + 2 baris teks',                        price:'Rp 185.000', image:'images/shiny-S409.jpg' },
+      { id:'shiny-R538D',     category:'shiny-tanggal-otomatis',     brand:'SHINY',  name:'Shiny Dater R-538-D',                spec:'Area cap: Oval 38mm · Tanggal otomatis',                       price:'Rp 185.000', image:'images/shiny-R538D.jpg' },
+      { id:'shiny-R542D',     category:'shiny-tanggal-otomatis',     brand:'SHINY',  name:'Shiny Dater R-542D',                 spec:'Area cap: Oval 42mm · Tanggal otomatis',                       price:'Rp 195.000', image:'images/shiny-R542D.jpg' },
+
+      // STEMPEL ANGKA TRODAT
+      { id:'trodat-1534',     category:'trodat-angka',               brand:'TRODAT', name:'Trodat Numberer 1534',               spec:'Tinggi angka: 3 mm · 4 digit',                                 price:'Rp 185.000', image:'images/trodat-1534.jpg' },
+      { id:'trodat-1544',     category:'trodat-angka',               brand:'TRODAT', name:'Trodat Numberer 1544',               spec:'Tinggi angka: 4 mm · 4 digit',                                 price:'Rp 195.000', image:'images/trodat-1544.jpg' },
+      { id:'trodat-1554',     category:'trodat-angka',               brand:'TRODAT', name:'Trodat Numberer 1554',               spec:'Tinggi angka: 5 mm · 4 digit',                                 price:'Rp 205.000', image:'images/trodat-1554.jpg' },
+      { id:'trodat-1546',     category:'trodat-angka',               brand:'TRODAT', name:'Trodat Numberer 1546',               spec:'Tinggi angka: 4 mm · 6 digit',                                 price:'Rp 215.000', image:'images/trodat-1546.jpg' },
+      { id:'trodat-1556',     category:'trodat-angka',               brand:'TRODAT', name:'Trodat Numberer 1556',               spec:'Tinggi angka: 5 mm · 6 digit',                                 price:'Rp 225.000', image:'images/trodat-1556.jpg' },
+      { id:'trodat-1558',     category:'trodat-angka',               brand:'TRODAT', name:'Trodat Numberer 1558',               spec:'Tinggi angka: 5 mm · 8 digit',                                 price:'Rp 245.000', image:'images/trodat-1558.jpg' },
+      { id:'trodat-15510',    category:'trodat-angka',               brand:'TRODAT', name:'Trodat Numberer 15510',              spec:'Tinggi angka: 5 mm · 10 digit',                                price:'Rp 265.000', image:'images/trodat-15510.jpg' },
+      { id:'trodat-15512',    category:'trodat-angka',               brand:'TRODAT', name:'Trodat Numberer 15512',              spec:'Tinggi angka: 5 mm · 12 digit',                                price:'Rp 285.000', image:'images/trodat-15512.jpg' },
+      { id:'trodat-15126',    category:'trodat-angka',               brand:'TRODAT', name:'Trodat Numberer 15126',              spec:'Tinggi angka: 12 mm · 6 digit besar',                          price:'Rp 325.000', image:'images/trodat-15126.jpg' },
+
+      // STEMPEL ANGKA SHINY
+      { id:'shiny-N38',       category:'shiny-angka',                brand:'SHINY',  name:'Shiny Numberer N-38',                spec:'Tinggi angka: 3 mm · 8 digit',                                 price:'Rp 155.000', image:'images/shiny-N38.jpg' },
+      { id:'shiny-N48',       category:'shiny-angka',                brand:'SHINY',  name:'Shiny Numberer N-48',                spec:'Tinggi angka: 4 mm · 8 digit',                                 price:'Rp 165.000', image:'images/shiny-N48.jpg' },
+      { id:'shiny-N58',       category:'shiny-angka',                brand:'SHINY',  name:'Shiny Numberer N-58',                spec:'Tinggi angka: 5 mm · 8 digit',                                 price:'Rp 175.000', image:'images/shiny-N58.jpg' },
+      { id:'shiny-N310',      category:'shiny-angka',                brand:'SHINY',  name:'Shiny Numberer N-310',               spec:'Tinggi angka: 3 mm · 10 digit',                                price:'Rp 175.000', image:'images/shiny-N310.jpg' },
+      { id:'shiny-N410',      category:'shiny-angka',                brand:'SHINY',  name:'Shiny Numberer N-410',               spec:'Tinggi angka: 4 mm · 10 digit',                                price:'Rp 185.000', image:'images/shiny-N410.jpg' },
+      { id:'shiny-N510',      category:'shiny-angka',                brand:'SHINY',  name:'Shiny Numberer N-510',               spec:'Tinggi angka: 5 mm · 10 digit',                                price:'Rp 195.000', image:'images/shiny-N510.jpg' },
+      { id:'shiny-N412',      category:'shiny-angka',                brand:'SHINY',  name:'Shiny Numberer N-412',               spec:'Tinggi angka: 4 mm · 12 digit',                                price:'Rp 205.000', image:'images/shiny-N412.jpg' },
+      { id:'shiny-N512',      category:'shiny-angka',                brand:'SHINY',  name:'Shiny Numberer N-512',               spec:'Tinggi angka: 5 mm · 12 digit',                                price:'Rp 215.000', image:'images/shiny-N512.jpg' },
+      { id:'shiny-N416',      category:'shiny-angka',                brand:'SHINY',  name:'Shiny Numberer N-416',               spec:'Tinggi angka: 4 mm · 16 digit',                                price:'Rp 235.000', image:'images/shiny-N416.jpg' },
+
+      // BANTALAN / REPLACEMENT INK PAD TRODAT
+      { id:'pad-trodat-6/4911', category:'trodat-inkpad',            brand:'TRODAT', name:'Replacement Pad Trodat 6/4911',      spec:'Untuk Trodat 4911 · 2 pcs/pack',                               price:'Rp 35.000',  image:'images/pad-trodat-4911.jpg' },
+      { id:'pad-trodat-6/4913', category:'trodat-inkpad',            brand:'TRODAT', name:'Replacement Pad Trodat 6/4913',      spec:'Untuk Trodat 4913 · 2 pcs/pack',                               price:'Rp 40.000',  image:'images/pad-trodat-4913.jpg' },
+      { id:'pad-trodat-6/4810', category:'trodat-inkpad',            brand:'TRODAT', name:'Replacement Pad Trodat 6/4810',      spec:'Untuk Trodat Dater 4810/4813/4817 · 2pcs',                     price:'Rp 45.000',  image:'images/pad-trodat-4810.jpg' },
+
+      // BANTALAN / REPLACEMENT INK PAD SHINY
+      { id:'pad-shiny-S842',    category:'shiny-inkpad',             brand:'SHINY',  name:'Replacement Pad Shiny S-842',        spec:'Untuk Shiny S-842/S-852/S-851 · 2pcs',                         price:'Rp 30.000',  image:'images/pad-shiny-S842.jpg' },
+      { id:'pad-shiny-S843',    category:'shiny-inkpad',             brand:'SHINY',  name:'Replacement Pad Shiny S-843',        spec:'Untuk Shiny S-843/S-828 · 2 pcs/pack',                         price:'Rp 35.000',  image:'images/pad-shiny-S843.jpg' },
+      { id:'pad-shiny-dater',   category:'shiny-inkpad',             brand:'SHINY',  name:'Replacement Pad Shiny Dater',        spec:'Untuk Shiny S-400/S-303/S-311 · 2pcs',                         price:'Rp 35.000',  image:'images/pad-shiny-dater.jpg' },
+
+      // TINTA & BAK STEMPEL TRODAT
+      { id:'tinta-trodat-7011-25', category:'trodat-tinta-bak',      brand:'TRODAT', name:'Tinta Trodat 7011 (25 ml)',           spec:'Untuk Trodat self-inking · Semua warna',                       price:'Rp 25.000',  image:'images/tinta-trodat-7011-25.jpg' },
+      { id:'tinta-trodat-7011-28', category:'trodat-tinta-bak',      brand:'TRODAT', name:'Tinta Trodat 7011 (28 ml)',           spec:'Untuk Trodat self-inking · Semua warna',                       price:'Rp 28.000',  image:'images/tinta-trodat-7011-28.jpg' },
+
+      // TINTA & BAK STEMPEL SHINY
+      { id:'tinta-shiny',          category:'shiny-tinta-bak',       brand:'SHINY',  name:'Tinta Shiny Refill',                  spec:'Untuk Shiny self-inking · Semua warna',                        price:'Rp 22.000',  image:'images/tinta-shiny.jpg' },
+
+      // TINTA PERMANEN
+      { id:'tinta-tat-hitam',      category:'tinta-permanen',        brand:'TAT',    name:'Tinta Permanen TAT Shachihata (Hitam)', spec:'Tinta permanen waterproof · 50 ml',                        price:'Rp 55.000',  image:'images/tinta-tat-hitam.jpg' },
+      { id:'tinta-tat-merah',      category:'tinta-permanen',        brand:'TAT',    name:'Tinta Permanen TAT Shachihata (Merah)', spec:'Tinta permanen waterproof · 50 ml',                        price:'Rp 55.000',  image:'images/tinta-tat-merah.jpg' },
+    ];
+
+    // ── STATE ─────────────────────────────────────────────────────────────────
+    let activeCategory = 'all';
+
+    // ── HELPERS ───────────────────────────────────────────────────────────────
+    function getSearchQuery() {
+      // Both inputs stay in sync; use whichever is visible / has value
+      const desktop = document.getElementById('search-input').value.toLowerCase().trim();
+      const mobile  = document.getElementById('search-input-mobile').value.toLowerCase().trim();
+      return desktop || mobile;
+    }
+
+    function getFiltered() {
+      const q = getSearchQuery();
+      return products.filter(p => {
+        let matchCat = activeCategory === 'all' || p.category === activeCategory;
+        if (activeCategory === 'trodat') matchCat = p.brand === 'TRODAT';
+        if (activeCategory === 'shiny')  matchCat = p.brand === 'SHINY';
+        if (activeCategory === 'tinta')  matchCat = p.category.includes('tinta') || p.category.includes('inkpad');
+
+        const matchSearch = !q ||
+          p.name.toLowerCase().includes(q) ||
+          p.spec.toLowerCase().includes(q) ||
+          p.id.toLowerCase().includes(q);
+        return matchCat && matchSearch;
+      });
+    }
+
+    function cardHTML(p) {
+      const badgeColor =
+        p.brand === 'TRODAT' ? 'bg-red-100 text-red-700' :
+        p.brand === 'SHINY'  ? 'bg-blue-100 text-blue-700' :
+        p.brand === 'TAT'    ? 'bg-purple-100 text-purple-700' :
+                               'bg-slate-100 text-slate-700';
+      const waText = encodeURIComponent(
+        'Halo Admin PRO Stamp, saya ingin pesan/tanya produk: ' + p.name
+      );
+      return `
+        <div class="product-card bg-white rounded-xl border border-slate-200 overflow-hidden hover:shadow-md hover:border-slate-300 transition-all duration-200 flex flex-col">
+          <div class="relative aspect-square bg-slate-100 flex items-center justify-center overflow-hidden">
+            <span class="absolute top-2 left-2 z-10 text-[10px] font-bold px-2 py-0.5 rounded-full shadow-sm ${badgeColor}">${p.brand}</span>
+            <img src="${p.image}" alt="${p.name}"
+                 class="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                 loading="lazy"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div style="display:none" class="flex flex-col items-center justify-center gap-2 w-full h-full text-slate-300 bg-slate-50">
+              <svg class="w-10 h-10" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-3-3v6M4 7v10a1 1 0 001 1h14a1 1 0 001-1V7M4 7l1-2h14l1 2M4 7h16"/>
+              </svg>
+              <span class="text-xs text-slate-400">Foto segera hadir</span>
+            </div>
+          </div>
+          <div class="p-3 sm:p-4 flex flex-col flex-1 gap-1">
+            <h3 class="text-sm font-semibold text-slate-900 leading-tight">${p.name}</h3>
+            <p class="text-xs text-slate-500 leading-relaxed">${p.spec}</p>
+            <p class="text-sm font-bold text-blue-600 mt-auto pt-2">${p.price}</p>
+            <a href="https://wa.me/6282114017009?text=${waText}"
+               target="_blank" rel="noopener noreferrer"
+               class="mt-1.5 w-full text-center text-xs font-semibold bg-green-500 hover:bg-green-600 active:bg-green-700 text-white py-2 rounded-lg transition-colors">
+              Pesan via WhatsApp
+            </a>
+          </div>
+        </div>`;
+    }
+
+    function render() {
+      const grid  = document.getElementById('product-grid');
+      const empty = document.getElementById('empty-state');
+      const count = document.getElementById('result-count');
+      const list  = getFiltered();
+
+      if (list.length === 0) {
+        grid.innerHTML = '';
+        empty.classList.remove('hidden');
+        count.textContent = '0 produk ditemukan';
+        return;
+      }
+
+      empty.classList.add('hidden');
+      grid.innerHTML = list.map(p => cardHTML(p)).join('');
+      count.textContent = list.length + ' produk ditemukan';
+    }
+
+    function setCategory(catId) {
+      activeCategory = catId;
+      document.querySelectorAll('#sidebar-cats .cat-btn').forEach(btn => {
+        if (btn.dataset.cat === catId) {
+          btn.className = 'cat-btn w-full text-left text-xs sm:text-[13px] leading-snug px-3 py-2 rounded-lg font-semibold transition-colors bg-blue-600 text-white shadow-sm';
+        } else {
+          btn.className = 'cat-btn w-full text-left text-xs sm:text-[13px] leading-snug px-3 py-2 rounded-lg font-medium transition-colors text-slate-700 hover:bg-slate-100 hover:text-slate-900';
+        }
+      });
+      document.querySelectorAll('#tab-cats .cat-btn').forEach(btn => {
+        if (btn.dataset.cat === catId) {
+          btn.className = 'cat-btn shrink-0 text-xs font-semibold px-3 py-1.5 rounded-full border transition-colors whitespace-nowrap bg-blue-600 text-white border-blue-600 shadow-sm';
+        } else {
+          btn.className = 'cat-btn shrink-0 text-xs font-semibold px-3 py-1.5 rounded-full border transition-colors whitespace-nowrap text-slate-700 hover:bg-slate-100 bg-white border-slate-200';
+        }
+      });
+      render();
+    }
+
+    // ── RENDER CATEGORY BUTTONS ───────────────────────────────────────────────
+    function buildCategoryButtons() {
+      const sidebarEl = document.getElementById('sidebar-cats');
+      const tabEl     = document.getElementById('tab-cats');
+
+      categories.forEach(cat => {
+        // ── Sidebar button ──
+        const sBtn = document.createElement('button');
+        sBtn.className = 'cat-btn w-full text-left text-xs sm:text-[13px] leading-snug px-3 py-2 rounded-lg font-medium transition-colors ' +
+          (cat.id === 'all'
+            ? 'bg-blue-600 text-white font-semibold shadow-sm'
+            : 'text-slate-700 hover:bg-slate-100 hover:text-slate-900');
+        sBtn.dataset.cat = cat.id;
+        sBtn.textContent = cat.label;
+        sBtn.addEventListener('click', () => setCategory(cat.id));
+        sidebarEl.appendChild(sBtn);
+
+        // ── Tab/pill button ──
+        const tBtn = document.createElement('button');
+        tBtn.className = 'cat-btn shrink-0 text-xs font-semibold px-3 py-1.5 rounded-full border transition-colors whitespace-nowrap ' +
+          (cat.id === 'all'
+            ? 'bg-blue-600 text-white border-blue-600 shadow-sm'
+            : 'text-slate-700 hover:bg-slate-100 bg-white border-slate-200');
+        tBtn.dataset.cat = cat.id;
+        tBtn.textContent = cat.label;
+        tBtn.addEventListener('click', () => setCategory(cat.id));
+        tabEl.appendChild(tBtn);
+      });
+    }
+
+    // ── SEARCH EVENT LISTENERS ────────────────────────────────────────────────
+    document.getElementById('search-input').addEventListener('input', function () {
+      document.getElementById('search-input-mobile').value = this.value;
+      render();
+    });
+    document.getElementById('search-input-mobile').addEventListener('input', function () {
+      document.getElementById('search-input').value = this.value;
+      render();
+    });
+
+    // ── INIT ──────────────────────────────────────────────────────────────────
+    buildCategoryButtons();
+    const urlParams = new URLSearchParams(window.location.search);
+    const initialCat = urlParams.get('cat');
+    if (initialCat) {
+      setCategory(initialCat);
+    } else {
+      render();
+    }
+  </script>
+</body>
+</html>
